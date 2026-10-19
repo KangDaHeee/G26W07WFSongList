@@ -24,6 +24,10 @@
         /// </summary>
         private void InitializeComponent() {
             listSong = new ListBox();
+            txtTitle = new TextBox();
+            txtArtist = new TextBox();
+            txtRating = new TextBox();
+            btnAdd = new Button();
             SuspendLayout();
             // 
             // listSong
@@ -31,22 +35,66 @@
             listSong.FormattingEnabled = true;
             listSong.Location = new Point(12, 12);
             listSong.Name = "listSong";
-            listSong.Size = new Size(498, 304);
+            listSong.Size = new Size(568, 304);
             listSong.TabIndex = 0;
+            // 
+            // txtTitle
+            // 
+            txtTitle.Location = new Point(12, 333);
+            txtTitle.Name = "txtTitle";
+            txtTitle.PlaceholderText = "제목";
+            txtTitle.Size = new Size(270, 31);
+            txtTitle.TabIndex = 1;
+            // 
+            // txtArtist
+            // 
+            txtArtist.Location = new Point(288, 333);
+            txtArtist.Name = "txtArtist";
+            txtArtist.PlaceholderText = "가수";
+            txtArtist.Size = new Size(134, 31);
+            txtArtist.TabIndex = 2;
+            // 
+            // txtRating
+            // 
+            txtRating.Location = new Point(428, 333);
+            txtRating.MaxLength = 1;
+            txtRating.Name = "txtRating";
+            txtRating.PlaceholderText = "평점";
+            txtRating.Size = new Size(76, 31);
+            txtRating.TabIndex = 3;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(510, 333);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(70, 34);
+            btnAdd.TabIndex = 4;
+            btnAdd.Text = "추가";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += OnAdd;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(524, 492);
+            ClientSize = new Size(592, 377);
+            Controls.Add(btnAdd);
+            Controls.Add(txtRating);
+            Controls.Add(txtArtist);
+            Controls.Add(txtTitle);
             Controls.Add(listSong);
             Name = "Form1";
             Text = "애창곡";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private ListBox listSong;
+        private TextBox txtTitle;
+        private TextBox txtArtist;
+        private TextBox txtRating;
+        private Button btnAdd;
     }
 }
